@@ -9,6 +9,14 @@ At a high level, here are the steps (reference [Logz.io Bulk format](https://app
 - Create JSON document with required (**environment**, **application**) and any optional fields (e.g. **team**, **project**, **message**) (review [Source Code](src/main/java/com/rentacenter/examples/LogzioBulkExample.java))
 - Post log to Logz.io
 
+### Requirements
+To run this example, you must:
+- have the ability to clone this Docker repo (https://github.com/rentacenter/logzio.git)
+- have installed [Docker](https://www.docker.com/)
+- have the ability for Docker to pull images from [Docker Hub](https://hub.docker.com/)
+- have a [logz.io](http://logz.io) account
+- have the ability to communicate to *listener.logz.io* over secure *port 8071*
+
 ### Build the example
 ```shell
 $ docker build -t logz/bulk-example:1 .

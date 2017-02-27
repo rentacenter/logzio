@@ -2,7 +2,6 @@
 This example shows how to run the [Logz.io Docker container](https://github.com/logzio/logzio-docker) to collect your Docker metrics.
 
 ## Manual run
-
 If you want to manually run the Logz.io container, primarily for testing purposes.
 
 Change the **environment**, **application**, and **tier** fields below as appropriate.  While best practices should be to keep *environment* and *application*, *tier* was just an example to add additional fields, add as many that make sense for your use-case.
@@ -12,7 +11,6 @@ $ docker run --name logzio -d --restart=always -v /var/run/docker.sock:/var/run/
 ```
 
 ## AWS ECS
-
 The best practice for running a specific agent on every EC2 instance in the ECR cluster is to launch a specific task definition with a user data script. (Reference [blog post](https://aws.amazon.com/blogs/compute/running-an-amazon-ecs-task-on-every-instance/).)
 
 TODO:
@@ -26,3 +24,10 @@ az=$(curl -s http://instance-data/latest/meta-data/placement/availability-zone)
 region=${az:0:${#az} - 1}
 aws ecs start-task --cluster $cluster --task-definition cadvisor:1 --container-instances $instance_arn --region $region
 ```
+
+### Requirements
+To run this example, you must:
+- have installed [Docker](https://www.docker.com/)
+- have the ability for Docker to pull images from [Docker Hub](https://hub.docker.com/)
+- have a [logz.io](http://logz.io) account
+- have the ability to communicate to *listener.logz.io* over secure *port 8071*

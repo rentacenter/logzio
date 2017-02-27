@@ -12,6 +12,14 @@ At a high level, here are the steps (review [Dockerfile](Dockerfile) for more sp
   - If you need additional fields, add them as well in similar format
 - Restart *rsyslog*
 
+### Requirements
+To run this example, you must:
+- have the ability to clone this Docker repo (https://github.com/rentacenter/logzio.git)
+- have installed [Docker](https://www.docker.com/)
+- have the ability for Docker to pull images from [Docker Hub](https://hub.docker.com/)
+- have a [logz.io](http://logz.io) account
+- have the ability to communicate to *listener.logz.io* over secure *port 5001*
+
 ### Build the example
 ```shell
 $ docker build -t logz/rsyslog-tls-example:1 .

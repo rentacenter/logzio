@@ -12,6 +12,14 @@ At a high level, here are the steps (review [Dockerfile](Dockerfile) for more sp
 - Install the Logz.io libraries and dependencies (review [pom.xml](pom.xml))
 - Update your *log4j.properties* file to include the *LogzioAppender* and desired properties (review [log4j.properties](log4j.properties))
 
+### Requirements
+To run this example, you must:
+- have the ability to clone this Docker repo (https://github.com/rentacenter/logzio.git)
+- have installed [Docker](https://www.docker.com/)
+- have the ability for Docker to pull images from [Docker Hub](https://hub.docker.com/)
+- have a [logz.io](http://logz.io) account
+- have the ability to communicate to *listener.logz.io* over secure *port 8071*
+
 ### Build the example
 ```shell
 $ docker build -t logz/tomcat8-example:1 .

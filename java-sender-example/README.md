@@ -10,6 +10,14 @@ At a high level, here are the steps (reference [Logz.io Java Sender](https://git
 - Send log to Logz.io
 - Shut down the sender at application exit (i.e. shutdown hook)
 
+### Requirements
+To run this example, you must:
+- have the ability to clone this Docker repo (https://github.com/rentacenter/logzio.git)
+- have installed [Docker](https://www.docker.com/)
+- have the ability for Docker to pull images from [Docker Hub](https://hub.docker.com/)
+- have a [logz.io](http://logz.io) account
+- have the ability to communicate to *listener.logz.io* over secure *port 8071*
+
 ### Build the example
 ```shell
 $ docker build -t logz/java-sender-example:1 .
