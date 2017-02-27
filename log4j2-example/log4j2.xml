@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+    <LogzioAppender name="Logzio">
+      <!-- Your Logz.io token, which can be found under "settings" in your account. -->
+      <logzioToken>$LOGZIO_TOKEN</logzioToken>
+
+      <!-- The log type for that sender (default java) -->
+      <!-- <logzioType>java</logzioType> -->
+
+      <!-- How often the sender should drain the buffer (in seconds) - default 5 -->
+      <!-- <drainTimeoutSec>5</drainTimeoutSec> -->
+
+      <!--
+        The percent of used file system space at which the sender will stop buffering.
+        When we will reach that percentage, the file system in which the buffer is
+        stored will drop all new logs until the percentage of used space drops below
+        that threshold. Set to -1 to never stop processing new logs (default 98)
+      -->
+      <!-- <fileSystemFullPercentThreshold>98</fileSystemFullPercentThreshold> -->
+
+      <!--
+        Where the sender should store the buffer. It should be at least one folder
+        in path. (defaults to System.getProperty("java.io.tmpdir"))
+      -->
+      <!-- <bufferDir></bufferDir> -->
+
+      <!-- Logz.io URL, that can be found under "Log Shipping -> Libraries" in your account. -->
+      <!-- <logzioUrl>https://listener.logz.io:8071</logzioUrl> -->
+
+      <!-- The socket timeout during log shipment (default 10 * 1000) -->
+      <!-- <socketTimeoutMs>10000</socketTimeoutMs> -->
+
+      <!-- The connection timeout during log shipment (default 10 * 1000) -->
+      <!-- <connectTimeoutMs>10000</connectTimeoutMs> -->
+
+      <!--
+        Optional. If true, then a field named 'hostname' will be added holding the
+        host name of the machine. If from some reason there's no defined hostname,
+        this field won't be added (default false)
+      -->
+      <addHostname>true</addHostname>
+
+      <!--
+        Optional. Allows to add additional fields to the JSON message sent. The
+        format is "fieldName1=fieldValue1;fieldName2=fieldValue2". You can
+        optionally inject an environment variable value using the following
+        format: "fieldName1=fieldValue1;fieldName2=$ENV_VAR_NAME". In that case,
+        the environment variable should be the only value. In case the environment
+        variable can't be resolved, the field will be omitted. (default None)
+      -->
+      <!-- <additionalFields></additionalFields> -->
+      <additionalFields>environment=$ENVIRONMENT;application=log4j2example</additionalFields>
+
+      <!-- Print some debug messages to stdout to help to diagnose issues (default false) -->
+      <!-- <debug>false</debug> -->
+    </LogzioAppender>
+  </Appenders>
+  <Loggers>
+    <Root level="info">
+      <AppenderRef ref="Console"/>
+      <AppenderRef ref="Logzio"/>
+    </Root>
+  </Loggers>
+</Configuration>

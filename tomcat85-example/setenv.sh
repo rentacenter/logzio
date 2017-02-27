@@ -1,0 +1,1 @@
+export CLASSPATH=${CATALINA_BASE}/lib/logzio-log4j2-appender-1.0.2.jar:${CATALINA_BASE}/lib/log4j-api-2.8.jar:${CATALINA_BASE}/lib/log4j-core-2.8.jar:${CATALINA_BASE}/lib/log4j-jul-2.8.jar:${CATALINA_BASE}/lib/slf4j-api-1.7.22.jar:${CATALINA_BASE}/lib/log4j-slf4j-impl-2.8.jar:${CATALINA_BASE}/conf
