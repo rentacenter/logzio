@@ -22,6 +22,7 @@ The examples below have all been [dockerized](https://www.docker.com/) to greatl
 - [x] [Log4j 2 Appender](log4j2-example) example (Standalone Java application using log4j 2 - Logz.io [instructions](https://app.logz.io/#/dashboard/data-sources/Java--log4j2appender))
 - [x] [Spring Web Application](spring-webapp-example) example (Simple Spring application deployed to Tomcat 7 using log4j 1.2)
 - [x] [Tomcat 7](tomcat7-example) example (Tomcat 7 application server using log4j 1.2)
+- [x] [Tomcat 7 / Web Application](tomcat7-webapp-example) example (Tomcat 7 application server using log4j 1.2 bundled with Web Application deployed using unique log4j config)
 - [x] [Tomcat 8](tomcat8-example) example (Tomcat 8 application server using log4j 1.2)
 - [x] [Tomcat 8.5](tomcat85-example) example (Tomcat 8.5 application server using log4j 2)
 - [x] [Rsyslog over TLS](rsyslog-tls-example) example (UN*X rsyslog configuration - Logz.io [instructions](https://app.logz.io/#/dashboard/data-sources/rsyslog-overTLS))
