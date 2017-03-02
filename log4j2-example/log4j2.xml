@@ -24,7 +24,7 @@
 
       <!--
         Where the sender should store the buffer. It should be at least one folder
-        in path. (defaults to System.getProperty("java.io.tmpdir"))
+        in path. (defaults to System.getProperty("java.io.tmpdir") + File.separator + logzioType)
       -->
       <!-- <bufferDir></bufferDir> -->
 
