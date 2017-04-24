@@ -17,6 +17,8 @@ Below is simply a list of best practices to be referenced:
 
 The examples below have all been [dockerized](https://www.docker.com/) to greatly simplify pulling them down & running them.
 
+**NOTICE:** Log4j 1.2 has End of Life as of August 5th, 2015 (https://logging.apache.org/log4j/1.2/download.html).  In addition, there is a known deadlock situation when using with Bigqueue; Logz.io has deprecated their appenders that utilize Log4j 1.2.  Instead, convert to using Log4j 2.x or Logback as an alternative.
+
 - [x] [Log4j 1.2 Appender](log4j-example) example (Standalone Java application using log4j 1.2 - Logz.io [instructions](https://app.logz.io/#/dashboard/data-sources/Java--log4jappender))
 - [x] [Log4j 1.2 Appender with Java 7](log4j-jre7-example) example (Standalone Java application using log4j 1.2 - Logz.io [instructions](https://app.logz.io/#/dashboard/data-sources/Java--log4jappender))
 - [x] [Log4j 2 Appender](log4j2-example) example (Standalone Java application using log4j 2 - Logz.io [instructions](https://app.logz.io/#/dashboard/data-sources/Java--log4j2appender))
