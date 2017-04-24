@@ -25,7 +25,8 @@ public class LogzioBulkExample {
 
         // all logs must include "environment" & "application"
         input.put("environment", System.getenv("ENVIRONMENT"));
-        input.put("application", "bulkexample");
+        input.put("application", "logzioexamples");
+        input.put("source_system", "LogzioBulkExample");
 
         // any additional values
         input.put("team", "DevOps");

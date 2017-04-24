@@ -12,8 +12,11 @@ while [ true ]; do
 done
 
 # access web-application
-echo "accessing example web-application"
-curl -vvv http://localhost:8080/spring-webapp-example/
+for i in {1..1200}; do
+  echo "$i: accessing example web-application"
+  curl -vvv http://localhost:8080/spring-webapp-example/ >/dev/null 2>&1
+  sleep 1
+done
 
 # shutdown tomcat
 catalina.sh stop

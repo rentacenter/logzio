@@ -7,7 +7,7 @@ At a high level, here are the steps (review [Dockerfile](Dockerfile) for more sp
 - Create */var/spool/rsyslog* directory
 - Install certificate (*AddTrustExternalCARoot.crt*) into */etc/ssl/certs*
 - Install rsyslog configuration file (*21-logzio.conf*) into */etc/rsyslog.d*
-  - Update the **environment** and **application** fields in the logformat
+  - Update the **environment**, **application**, **source_system** fields in the logformat
   - You may want to remove or update the **team** and **project** fields
   - If you need additional fields, add them as well in similar format
 - Restart *rsyslog*

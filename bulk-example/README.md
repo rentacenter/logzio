@@ -6,7 +6,7 @@ While this example shows a very simple approach to sending JSON logs to a web se
 ### High level steps
 At a high level, here are the steps (reference [Logz.io Bulk format](https://app.logz.io/#/dashboard/data-sources/Bulk-HTTPS))
 - Construct Logz.io endpoint URL (`https://listener.logz.io:8071/?token=<token>&type=<type>`)
-- Create JSON document with required (**environment**, **application**) and any optional fields (e.g. **team**, **project**, **message**) (review [Source Code](src/main/java/com/rentacenter/examples/LogzioBulkExample.java))
+- Create JSON document with required (**environment**, **application**, **source_host**) and any optional fields (e.g. **team**, **project**, **message**) (review [Source Code](src/main/java/com/rentacenter/examples/LogzioBulkExample.java))
 - Post log to Logz.io
 
 ### Requirements

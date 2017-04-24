@@ -97,7 +97,7 @@
         variable can't be resolved, the field will be omitted. (default None)
       -->
       <!-- <additionalFields></additionalFields> -->
-      <additionalFields>environment=$ENVIRONMENT;application=tomcat85example</additionalFields>
+      <additionalFields>environment=$ENVIRONMENT;application=logzioexamples;source_system=tomcat85example</additionalFields>
 
       <!-- Print some debug messages to stdout to help to diagnose issues (default false) -->
       <!-- <debug>false</debug> -->

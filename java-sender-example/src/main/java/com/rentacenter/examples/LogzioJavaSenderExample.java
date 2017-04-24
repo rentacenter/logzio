@@ -54,9 +54,10 @@ public class LogzioJavaSenderExample {
             e.printStackTrace();
         }
 
-        // all logs must include "environment" & "application"
+        // all logs must include "environment", "application", & "source_system"
         additionalFieldsMap.put("environment", System.getenv("ENVIRONMENT"));
-        additionalFieldsMap.put("application", "javasenderexample");
+        additionalFieldsMap.put("application", "logzioexamples");
+        additionalFieldsMap.put("source_system", "LogzioJavaSenderExample");
 
         // any additional values
         additionalFieldsMap.put("team", "DevOps");

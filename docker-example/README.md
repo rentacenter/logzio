@@ -4,10 +4,10 @@ This example shows how to run the [Logz.io Docker container](https://github.com/
 ## Manual run
 If you want to manually run the Logz.io container, primarily for testing purposes.
 
-Change the **environment**, **application**, and **tier** fields below as appropriate.  While best practices should be to keep *environment* and *application*, *tier* was just an example to add additional fields, add as many that make sense for your use-case.
+Change the **environment**, **application**, **source_system**, and **tier** fields below as appropriate.  While best practices should be to keep *environment*, *application*, and *source_system*; *tier* was just an example to add additional fields, add as many that make sense for your use-case.
 
 ```shell
-$ docker run --name logzio -d --restart=always -v /var/run/docker.sock:/var/run/docker.sock logzio/logzio-docker -t <supply logz.io token here> -a environment=dev -a application=ecommerce -a tier=web
+$ docker run --name logzio -d --restart=always -v /var/run/docker.sock:/var/run/docker.sock logzio/logzio-docker -t <supply logz.io token here> -a environment=dev -a application=logzioexamples -a source_system=logzio-docker -a tier=web
 ```
 
 ## AWS ECS
