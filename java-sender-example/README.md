@@ -6,7 +6,7 @@ The benefit of using this library over the [bulk](../bulk-example) web service i
 ### High level steps
 At a high level, here are the steps (reference [Logz.io Java Sender](https://github.com/logzio/logzio-java-sender))
 - Create the Logzio Java Sender with the desired arguments
-- Create log message with required (**environment**, **application**, **source_system**) and any optional fields (e.g. **team**, **project**, **message**) (review [Source Code](src/main/java/com/rentacenter/examples/LogzioJavaSenderExample.java))
+- Create log message with required (**environment**, **application**, **originator**) and any optional fields (e.g. **team**, **project**, **message**) (review [Source Code](src/main/java/com/rentacenter/examples/LogzioJavaSenderExample.java))
 - Send log to Logz.io
 - Shut down the sender at application exit (i.e. shutdown hook)
 

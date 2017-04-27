@@ -8,7 +8,7 @@ Below is simply a list of best practices to be referenced:
 
 - Send log data from **all sources** (e.g. servers, applications, devices).  The power of ELK is to centralize and analyze events across the spectrum allowing a full picture view for visibility and troubleshooting.
 - Logz.io is **licensed by the amount of data** ingested on a daily basis.  If you exceed the limit too far, the data will not be ingested into the platform.  (i.e. Don't turn on debug mode if it is not necessary.)
-- Consider logging additional fields (e.g. **environment**, **application**, **source_system**) to filter logs at a high level specific to your environment and application (e.g. *environment:prod AND application:logzioexamples AND source_system:esb*).
+- Consider logging additional fields (e.g. **environment**, **application**, **originator**) to filter logs at a high level specific to your environment and application (e.g. *environment:prod AND application:logzioexamples AND originator:esb*).
 - The goal should be to **use visualizations and dashboards** to identify trends and look for meaningful metrics proactively, before incidents are reported.  You can also set up alerts to assist with this.
 - **Secure** [log shipping](https://app.logz.io/#/dashboard/data-sources/) methods should be utilized for increased security when needed.
 - Ship **[JSON formatted logs](https://app.logz.io/#/dashboard/data-sources/JSON)** to easily control field names, field types, and log types.

@@ -53,7 +53,7 @@
         variable can't be resolved, the field will be omitted. (default None)
       -->
       <!-- <additionalFields></additionalFields> -->
-      <additionalFields>environment=$ENVIRONMENT;application=logzioexamples;source_system=log4j2example</additionalFields>
+      <additionalFields>environment=$ENVIRONMENT;application=logzioexamples;originator=log4j2example</additionalFields>
 
       <!-- Print some debug messages to stdout to help to diagnose issues (default false) -->
       <!-- <debug>false</debug> -->
